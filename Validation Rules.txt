@@ -1,2 +1,0 @@
-Age__c < 21
-ISPICKVAL( Status__c , "Ongoing")
