@@ -1,0 +1,33 @@
+Integer multiplicand = 0;
+While (multiplicand<10) {
+(multiplicand++);
+Integer multiplier = 3;
+Integer result;
+result = multiplicand*multiplier;    
+System.debug(multiplicand + '*' + multiplier + '=' +result);   
+}
+_______________________________________
+
+//in reverse order.//
+
+Integer multiplicand = 11;
+While (1<multiplicand) {
+(multiplicand--);
+Integer multiplier = 3;
+Integer result;
+result = multiplicand*multiplier;    
+System.debug(multiplicand + '*' + multiplier + '=' +result);   
+}
+______________________________________
+
+//output of the multiplication table with data type "String".//
+
+List<String> multiplicationtableon3 = new List<String> {'1*3=3', '2*3=6', '3*3=9', '4*3=12', '5*3=15', '6*3=18', '7*3=21', '8*3=24', '9*3=27', '10*3=30'};
+System.debug('multiplication table on 3' + ' ' + multiplicationtableon3);  
+
+
+
+
+
+
+

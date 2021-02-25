@@ -1,0 +1,5 @@
+Integer number = 6;
+While (number>1) {
+number--;
+System.debug('number:' + number);   
+}

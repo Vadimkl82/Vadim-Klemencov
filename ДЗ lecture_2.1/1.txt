@@ -1,0 +1,8 @@
+String myString = 'Hellow world';
+System.debug(myString);
+_________________________________
+
+OR
+_________________________________
+
+System.debug('Hellow world');

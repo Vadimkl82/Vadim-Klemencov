@@ -1,0 +1,5 @@
+Integer number = 0;
+While (number<5) {
+number++;
+System.debug('number:' + number);   
+}

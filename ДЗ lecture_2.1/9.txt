@@ -1,0 +1,7 @@
+String stringofwords = 'word1 word2 word3 word4';
+List<String> mylistwords = stringofwords.split(' ');
+system.debug('fist word = ' + mylistwords[0]);   
+system.debug('last word = ' + mylistwords[3]);  
+
+
+

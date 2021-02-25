@@ -1,0 +1,6 @@
+Integer enterednumber = 10;
+Integer firstnumber = 1;
+Integer lastnumber = 10;
+Integer summanumbers;
+summanumbers = enterednumber*(firstnumber+lastnumber)/2;    
+System.debug('summa numbers' + '=' + summanumbers); 
