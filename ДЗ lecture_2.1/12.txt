@@ -1,0 +1,17 @@
+Map<Integer,Integer> mymap = new Map<Integer,Integer>();
+String stringofwords = 'word pen book notebook';
+String[] listwords = stringofwords.split(' ');
+    for(string valuescollections : listwords){
+        integer length = valuescollections.length();
+        if(mymap.containsKey(length))
+		mymap.put(length, mymap.get(length) + 1);
+        else {
+		mymap.put(length, 1);
+        }
+    }
+      system.debug(mymap);
+
+
+
+
+
