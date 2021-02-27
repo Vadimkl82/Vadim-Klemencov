@@ -1,0 +1,13 @@
+Integer N = 100;   
+for(Integer i = 2; i <= N; i++){
+    boolean a = true;
+    for(Integer divisor = 2; divisor < i; divisor++){
+        if(math.mod(i,divisor) == 0){
+            a = false;
+            break;
+        }
+    }
+    if (a){
+        system.debug(i); 
+    }
+}
