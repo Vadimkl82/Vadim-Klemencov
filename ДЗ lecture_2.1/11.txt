@@ -1,11 +1,11 @@
 Integer [] arrayofnumbers = new Integer [] {1,2,3,4,5};
-    
-   List<Integer> newList = new List<Integer> ();
-	
-for (Integer i = 4 - 1; i>0; i--){
+    Integer n = arrayofnumbers.size(); 
+List<Integer> newList = new List<Integer> ();
+
+for (Integer i = n - 1; i>0; i--){
     if (math.mod(arrayofnumbers[i],2) == 0)
-      
-    newList.add(i);
+        
+        newList.add(i);
     newList.sort();
     System.debug(newList);
 }
