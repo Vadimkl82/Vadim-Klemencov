@@ -1,5 +1,5 @@
 Age
-YEAR( TODAY() )   -  Birthdate__c
+FLOOR((TODAY() - Birthdate__c) / 365.25)
 
 Upcoming Flights Count
 Roll-Up Summary
