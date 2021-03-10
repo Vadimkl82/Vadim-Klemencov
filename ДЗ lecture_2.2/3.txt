@@ -39,19 +39,19 @@ public class NumberUtility {
     
     public static void calculateFibinacciNumbers(Integer N) {
         List < Integer > fibinacciNumbers = new List < Integer > ();
-    
+        
         Integer fibo1 = 1;
         Integer fibo2 = 1;
         Integer fibonacci;
         fibinacciNumbers.add(fibo1);
         fibinacciNumbers.add(fibo2);
-    
+        
         for (Integer i = 3; i <= N; i++) {
             fibonacci = fibo1 + fibo2;
             fibo1 = fibo2;
             fibo2 = fibonacci;
             fibinacciNumbers.add(fibonacci);
+            system.debug(fibinacciNumbers);
         }
-        system.debug(fibinacciNumbers);
     }
 }
