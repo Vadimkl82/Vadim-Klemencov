@@ -1,4 +1,5 @@
 public with sharing class TouristTriggerHandler {
+    public static Boolean recursionProtection;
     
     public static void onBeforeInsert(List<Tourist__c> newTourists) {
         newTourists = [
