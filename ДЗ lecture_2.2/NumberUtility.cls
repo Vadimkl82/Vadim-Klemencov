@@ -1,7 +1,7 @@
 public class NumberUtility {
     
     public static List<Integer> getPrimeNumbers(Integer n) {
-        List<Integer> primeNumbers = new List<Integer> ();
+        List<Integer> primeNumbers = new List<Integer>();
         for (Integer i = 2; i <= n; i++) {
             boolean a = true;
             for (Integer divisor = 2; divisor < i; divisor++) {
@@ -39,7 +39,7 @@ public class NumberUtility {
     } 
     
     public static List<Integer> getFibinacciNumbers(Integer n) {
-        List<Integer> fibinacciNumbers = new List<Integer> ();
+        List<Integer> fibinacciNumbers = new List<Integer>();
         
         Integer fibo1 = 1;
         Integer fibo2 = 1;
