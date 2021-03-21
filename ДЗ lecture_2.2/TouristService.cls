@@ -1,26 +1,19 @@
 public class TouristService {
+    
     public static void markDuplicates(List<Tourist__c> newTourists) {
-        newTourists = [
-            SELECT Last_Name__c, Email__c, IsDuplicate__c 
-            FROM Tourist__c
-        ];
-        
-        for (Tourist__c Tourist1: newTourists) {
-            Integer duplication = 0;
-            
-            for (Tourist__c Tourist2: newTourists) {
-                
-                if (Tourist1.Email__c == Tourist2.Email__c && Tourist1.Last_Name__c == Tourist2.Last_Name__c) {
-                    duplication++;
-                    
-                    if (duplication > 1) {
-                        Tourist1.IsDuplicate__c = false;
-                        Tourist2.IsDuplicate__c = true;
-                        update Tourist1;
-                        update Tourist2;
-                    }
+        List<Tourist__c> recordsOfExistingTourists = TouristManager.getByEmailLastName();
+        List<Tourist__c> listOfNewTourists = new List<Tourist__c> ();
+       
+        for (Tourist__c existingTourist: recordsOfExistingTourists) {
+            for (Tourist__c newTourist: newTourists) {
+                Boolean isSameEmail = (existingTourist.Email__c == newTourist.Email__c);
+                Boolean isSameLastName = (existingTourist.Last_Name__c == newTourist.Last_Name__c);
+                if (isSameEmail && isSameLastName) {
+                    newTourist.IsDuplicate__c = true;
+                    listOfNewTourists.add(newTourist);
                 }
             }
         }
+        update listOfNewTourists;
     }
 }
