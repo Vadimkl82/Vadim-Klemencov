@@ -3,7 +3,7 @@ public with sharing class TouristTriggerHandler {
     
     public static void onBeforeInsert(List<Tourist__c> newTourists) {
         List<Tourist__c> recordsOfExistingTourists = TouristManager.getByEmailLastName();
-        List<Tourist__c> listOfNewTourists = new List<Tourist__c> ();
+        List<Tourist__c> listOfNewTourists = new List<Tourist__c>();
        
         for (Tourist__c existingTourist: recordsOfExistingTourists) {
             for (Tourist__c newTourist: newTourists) {
