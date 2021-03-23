@@ -22,5 +22,5 @@ public class FlightManager {
             FROM Flight__c
             WHERE Trip__r.Name = 'no trip'
         ];   
-	}
+    }
 }
