@@ -10,7 +10,7 @@ public class TouristManager {
             FROM Tourist__c
             WHERE Name = :firstName
         ];   
-	}
+    }
     
     public static List<Tourist__c> getByAge(Set<Integer> ages) {
         if(ages == null || ages.isEmpty()) {
@@ -24,7 +24,7 @@ public class TouristManager {
         ];   
     }
 
-     public static List<Tourist__c> getByFlightLists() {
+    public static List<Tourist__c> getByFlightLists() {
         List<Tourist__c> listOfTourists = [
             SELECT Name,
             Age__c, 
@@ -34,13 +34,14 @@ public class TouristManager {
             FROM Tourist__c
         ];   
         return listOfTourists;
-	}
+    }
 
     public static List<Tourist__c> getByEmailLastName() {
-      List<Tourist__c> listOfTouristsByEmailLastName = [
-          SELECT Last_Name__c,
-          Email__c
-          FROM Tourist__c];
-      return listOfTouristsByEmailLastName;
+        List<Tourist__c> listOfTouristsByEmailLastName = [
+            SELECT Last_Name__c,
+            Email__c
+            FROM Tourist__c
+	];
+        return listOfTouristsByEmailLastName;
     }
 }
