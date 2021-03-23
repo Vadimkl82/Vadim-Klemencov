@@ -13,7 +13,7 @@ public class TouristManager {
     }
     
     public static List<Tourist__c> getByAge(Set<Integer> ages) {
-        if(ages == Null) {
+        if(ages == null || ages.isEmpty()) {
             return new List<Tourist__c>();
         }
         return [
@@ -25,7 +25,7 @@ public class TouristManager {
     }
     
     public static List<Flight__c> getByStartDate(Integer startDate) {
-        if(startDate == Null || startDate == 0) {
+        if(startDate == null || startDate == 0) {
             return new List<Flight__c>();
         }
         return [
