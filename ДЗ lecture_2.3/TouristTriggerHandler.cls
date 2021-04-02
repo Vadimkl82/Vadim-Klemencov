@@ -38,9 +38,9 @@ public with sharing class TouristTriggerHandler {
                             flight.Condition__c = 'Declined';
                             flightsToUpdate.add(flight);
                             
-                	}
-            	}
-        	}
+                    }
+                }
+            }
         }
         if (flightsToUpdate.size() > 0) {
             update flightsToUpdate;
