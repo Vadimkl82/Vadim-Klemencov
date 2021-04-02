@@ -10,10 +10,8 @@ public class TouristService {
                 Boolean isSameLastName = (existingTourist.Last_Name__c == newTourist.Last_Name__c);
                 if (isSameEmail && isSameLastName) {
                     newTourist.IsDuplicate__c = true;
-                    listOfNewTourists.add(newTourist);
                 }
             }
         }
-        update listOfNewTourists;
     }
 }
