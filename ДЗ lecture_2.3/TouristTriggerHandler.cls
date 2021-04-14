@@ -22,7 +22,7 @@ public with sharing class TouristTriggerHandler {
             if (oldMap.get(voyager.Id).Active__c == true &&
                 newMap.get(voyager.Id).Active__c == false) {
                     for (Flight__c flight : voyager.flying__r) {
-                        if (flight.Trip__r.Start_Date__c > 2021) {
+                        if (flight.Trip__r.Start_Date__c > YEAR(TODAY())) {
                             flight.Condition__c = 'Declined';
                             flightsToUpdate.add(flight);
                             
